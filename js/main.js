@@ -23,7 +23,7 @@
         } else {
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
-    });
+    }); 
     
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
