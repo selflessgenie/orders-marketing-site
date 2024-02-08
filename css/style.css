@@ -167,7 +167,7 @@ h6,
 /*Added the below code to shift the hamburger to left and remove the border */
 .navbar-toggler {
     order: -1; /* Move the toggler to the beginning of the flex container */
-    margin-right: 10px; /* Adjust the spacing between the toggler and "Orders" */
+    margin-right: 5px; /* Adjust the spacing between the toggler and "Orders" */
 }
 
 .navbar-toggler:focus,
