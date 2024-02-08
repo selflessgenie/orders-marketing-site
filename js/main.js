@@ -100,11 +100,11 @@
 
     // Vendor carousel
     $('.vendor-carousel').owlCarousel({
-        loop: true,
-        margin: 45,
+        loop: false,
+        margin: 100,
         dots: false,
-        loop: true,
-        autoplay: true,
+        loop: false,
+        autoplay: false,
         smartSpeed: 1000,
         responsive: {
             0:{

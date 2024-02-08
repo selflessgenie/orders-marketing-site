@@ -515,3 +515,19 @@ h6,
         margin-bottom: -75px;
     }
 }
+
+.bubble-image {
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+.bubble {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    padding: 50px;
+    background-color: #5AB051; /* Bubble background color */
+    color: #fff; /* Text color */
+    border-radius: 50%; /* Adjust the border radius to change the bubble shape */
+  }
