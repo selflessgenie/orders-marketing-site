@@ -129,6 +129,16 @@ h6,
 
 
 /*** Navbar ***/
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.cross-icon .fa-bars:before {
+    content: '\f00d'; /* Unicode for cross icon */
+}
+
 .navbar-dark .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
     position: relative;
@@ -157,6 +167,7 @@ h6,
 /*Added the below code to shift the hamburger to left and remove the border */
 .navbar-toggler {
     order: -1; /* Move the toggler to the beginning of the flex container */
+    margin-right: 10px; /* Adjust the spacing between the toggler and "Orders" */
 }
 
 .navbar-toggler:focus,
