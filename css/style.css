@@ -174,7 +174,7 @@ h6,
 .navbar-toggler:active {
     outline: none !important; /* Remove outline when focused or active */
 }
-/***Ens of code added by Kasturba*/
+/***End of code added by Kasturba*/
 .navbar-dark .navbar-toggler {
     color: white !important;
     
@@ -519,15 +519,45 @@ h6,
 .bubble-image {
     border-radius: 50%; /* Makes the image round */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    transition: transform 0.3s ease;
 }
 
 .bubble {
     position: relative;
     display: inline-block;
-    width: 350px;
-    height: 350px;
+    width: 220px;
+    height: 220px;
     padding: 50px;
     background-color: #5AB051; /* Bubble background color */
     color: #fff; /* Text color */
     border-radius: 50%; /* Adjust the border radius to change the bubble shape */
   }
+
+.bubble-image:hover {
+    transform: scale(1.2);
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.01);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+}
+
+.popup h2{
+
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
