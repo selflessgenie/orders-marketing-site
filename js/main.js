@@ -23,7 +23,7 @@
         } else {
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
-    });
+    }); 
     
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
@@ -101,7 +101,7 @@
     // Vendor carousel
     $('.vendor-carousel').owlCarousel({
         loop: true,
-        margin: 45,
+        margin: 100,
         dots: false,
         loop: true,
         autoplay: true,
@@ -132,3 +132,7 @@ function selectNavbar(index) {
     elem[index].classList.add("active");
     console.log(elem);
 }
+
+document.getElementById("navbar-toggler").addEventListener("click", function() {
+    this.classList.toggle("cross-icon");
+});

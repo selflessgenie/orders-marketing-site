@@ -11,7 +11,7 @@
 .spinner {
     width: 40px;
     height: 40px;
-    background: var(--primary);
+    background: var(--secondary);
     margin: 100px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
@@ -76,13 +76,17 @@ h6,
 .fw-medium {
     font-weight: 600 !important;
 }
-
+/* Added by Kasturba to change the background color to required green*/
+.custom-navbar {
+    background-color: #34AD54; /* Replace #00FF00 with your desired shade of green */
+}
 
 /*** Button ***/
 .btn {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     transition: .5s;
+    border-radius: 10px; //Added  by Kasturba for Changing the button from square to curved edges.
 }
 
 .btn-primary,
@@ -91,8 +95,9 @@ h6,
     box-shadow: inset 0 0 0 50px transparent;
 }
 
+
 .btn-primary:hover {
-    box-shadow: inset 0 0 0 0 var(--primary);
+    box-shadow: inset 0 0 0 0 var(--secondary);
 }
 
 .btn-secondary:hover {
@@ -124,6 +129,16 @@ h6,
 
 
 /*** Navbar ***/
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.cross-icon .fa-bars:before {
+    content: '\f00d'; /* Unicode for cross icon */
+}
+
 .navbar-dark .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
     position: relative;
@@ -149,10 +164,20 @@ h6,
 .navbar-dark .navbar-brand h1 {
     color: #FFFFFF;
 }
+/*Added the below code to shift the hamburger to left and remove the border */
+.navbar-toggler {
+    order: -1; /* Move the toggler to the beginning of the flex container */
+    margin-right: 5px; /* Adjust the spacing between the toggler and "Orders" */
+}
 
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important; /* Remove outline when focused or active */
+}
+/***End of code added by Kasturba*/
 .navbar-dark .navbar-toggler {
     color: white !important;
-    border-color: white !important;
+    
 }
 
 @media (max-width: 991.98px) {
@@ -195,7 +220,7 @@ h6,
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: var(--primary);
+        background: var(--secondary);
         transition: .5s;
     }
 
@@ -257,7 +282,7 @@ h6,
     height: 5px;
     left: 0;
     bottom: 0;
-    background: var(--primary);
+    background: var(--secondary);
     border-radius: 2px;
 }
 
@@ -325,7 +350,7 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--primary);
+    background: var(--secondary);
     border-radius: 2px;
     transform: rotate(-45deg);
 }
@@ -365,12 +390,12 @@ h6,
     height: 15px;
     background: #DDDDDD;
     border-radius: 2px;
-    transition: .5s;
+    transition: .7s;
 }
 
 .testimonial-carousel .owl-dot.active {
     width: 30px;
-    background: var(--primary);
+    background: var(--secondary);
 }
 
 .testimonial-carousel .owl-item.center {
@@ -379,7 +404,7 @@ h6,
 }
 
 .testimonial-carousel .owl-item .testimonial-item {
-    transition: .5s;
+    transition: .7s;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
@@ -489,4 +514,50 @@ h6,
     .footer-about {
         margin-bottom: -75px;
     }
+}
+
+.bubble-image {
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    transition: transform 0.3s ease;
+}
+
+.bubble {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    padding: 50px;
+    background-color: #5AB051; /* Bubble background color */
+    color: #fff; /* Text color */
+    border-radius: 50%; /* Adjust the border radius to change the bubble shape */
+  }
+
+.bubble-image:hover {
+    transform: scale(1.2);
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.01);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+}
+
+.popup h2{
+
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
 }
