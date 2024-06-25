@@ -81,6 +81,10 @@ h6,
     background-color: #34AD54; /* Replace #00FF00 with your desired shade of green */
 }
 
+.navbar {
+    height: 62px;
+}
+
 /*** Button ***/
 .btn {
     font-family: 'Nunito', sans-serif;
@@ -182,8 +186,9 @@ h6,
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
-        position: relative;
+        position: fixed;
         background: #FFFFFF;
+        width: 100%;
     }
 
     .navbar-dark .navbar-nav .nav-link,
